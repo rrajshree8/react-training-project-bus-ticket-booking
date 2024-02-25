@@ -1,16 +1,13 @@
-// App.js
-import React from 'react';
-import Header from './component/Header';
-import Footer from './component/Footer';
+
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import Dashboard from "./component/Dashboard.js";
 
 function App() {
   return (
-    <div>
-      <Header />
-      
-      <Footer />
-      
-    </div>
+    <ChakraProvider>
+      <Dashboard/>
+    </ChakraProvider>
   );
 }
 
