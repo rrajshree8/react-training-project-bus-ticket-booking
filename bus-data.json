@@ -1,0 +1,823 @@
+{
+    "buses": [
+      {
+        "busName": "Bus100",
+        "busNumber": "100",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus101",
+        "busNumber": "101",
+        "stops": [
+          {
+            "stopName": "City Mall",
+            "arrivalTime": "08:15 AM",
+            "departureTime": "08:20 AM"
+          },
+          {
+            "stopName": "University",
+            "arrivalTime": "08:45 AM",
+            "departureTime": "08:50 AM"
+          },
+          {
+            "stopName": "Downtown",
+            "arrivalTime": "09:15 AM",
+            "departureTime": "09:20 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:45 AM",
+            "departureTime": "09:50 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus103",
+        "busNumber": "103",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus104",
+        "busNumber": "104",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus105",
+        "busNumber": "105",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus106",
+        "busNumber": "106",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus107",
+        "busNumber": "107",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus108",
+        "busNumber": "108",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus109",
+        "busNumber": "109",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus110",
+        "busNumber": "110",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus111",
+        "busNumber": "111",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus112",
+        "busNumber": "112",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus113",
+        "busNumber": "113",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus113",
+        "busNumber": "113",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus114",
+        "busNumber": "114",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus115",
+        "busNumber": "115",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus116",
+        "busNumber": "116",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus117",
+        "busNumber": "117",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus118",
+        "busNumber": "118",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": true,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      },
+      {
+        "busName": "Bus119",
+        "busNumber": "119",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      }, 
+      {
+        "busName": "Bus120",
+        "busNumber": "120",
+        "stops": [
+          {
+            "stopName": "Central Station",
+            "arrivalTime": "08:00 AM",
+            "departureTime": "08:10 AM"
+          },
+          {
+            "stopName": "City Market",
+            "arrivalTime": "08:30 AM",
+            "departureTime": "08:35 AM"
+          },
+          {
+            "stopName": "Airport",
+            "arrivalTime": "09:00 AM",
+            "departureTime": "09:10 AM"
+          },
+          {
+            "stopName": "Bus Stand",
+            "arrivalTime": "09:30 AM",
+            "departureTime": "09:35 AM"
+          }
+        ],
+        "isAC": false,
+        "seats": [
+          {"id": 1, "number": "A1", "available": true},
+          {"id": 2, "number": "A2", "available": false},
+          {"id": 3, "number": "A3", "available": true},
+          {"id": 4, "number": "A4", "available": true},
+          {"id": 7, "number": "A5", "available": false},
+          {"id": 8, "number": "A6", "available": true},
+          {"id": 5, "number": "B1", "available": false},
+          {"id": 6, "number": "B2", "available": true},
+          {"id": 9, "number": "B3", "available": false},
+          {"id": 10, "number": "B4", "available": true}
+        ]
+      } 
+    ]
+  }
