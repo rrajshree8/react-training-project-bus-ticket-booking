@@ -1,7 +1,7 @@
 import { Box, Image, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import BookedSeat from '../Assets/armchair-grey.png'
-import NotBooked from '../Assets/seat.png'
+import BookedSeat from '../assets/armchair-grey.png'
+import NotBooked from '../assets/seat.png'
 
 const Seater = ({item}) => {
     const[isSelect,SetSelect]=useState(!item.available)

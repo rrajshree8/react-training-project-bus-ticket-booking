@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-<<<<<<< HEAD
 import App from './App.js';
 
-=======
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ChakraProvider } from "@chakra-ui/react";
->>>>>>> d67462027cf198cc81c0b1c2eaec55a87e21c721
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
-    <ChakraProvider>
     <App />
-  </ChakraProvider>,
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

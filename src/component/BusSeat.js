@@ -1,9 +1,9 @@
 import { Box, Flex, Grid, GridItem, Text, Image, Button } from "@chakra-ui/react";
 import React from "react";
-import Sleeper from "./Sleeper";
-import Seater from "./Seater";
-import Stear from "../Assets/steering.png";
-import buses from "../Assets/data";
+import Sleeper from "./Sleeper.js";
+import Seater from "./Seater.js";
+import Stear from "../assets/steering.png";
+import buses from "../assets/data.js";
 
 const BusSeat = () => {
   return (
