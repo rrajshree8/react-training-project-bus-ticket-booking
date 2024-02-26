@@ -13,8 +13,9 @@ import React, { useState } from "react";
 import { Input } from "@chakra-ui/react";
 import busData from "./bus-data.json";
 import BusList from "./DisplayBusList.js";
+import { Link, useNavigate } from "react-router-dom";
 
-const SearchBar = () => {
+const SearchBar = ({ onChangeValue }) => {
   const today = new Date().toISOString().split("T")[0];
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
@@ -51,6 +52,7 @@ const SearchBar = () => {
     e.preventDefault();
     console.log(from, to, date);
     setShowBusList(true);
+    onChangeValue({from, to, date, AC});
   }
   return (
     <VStack
@@ -129,6 +131,9 @@ const SearchBar = () => {
               size="lg"
               onChange={(e) => setDate(e.target.value)}
             />
+            <Link to="/miniDasboard" style={{}}>
+
+            
             <Button
               bg={"blue.400"}
               rounded={"full"}
@@ -141,10 +146,11 @@ const SearchBar = () => {
             >
               SEARCH BUSES
             </Button>
+            </Link>
           </Stack>
         </Stack>
       </form>
-      {showBusList && <BusList from={from} to={to} date={date} AC={AC} buses={buses}/>}
+      {/* {showBusList && <BusList from={from} to={to} date={date} AC={AC} buses={buses}/>} */}
     
     </VStack>
     

@@ -6,18 +6,18 @@ import React, { useState } from "react";
 import backgroundImage from "../assets/Hero.jpeg";
 import SearchBar from "./SearchBar.js";
 
-export default function Hero() {
+export default function Hero({onChangeValue}) {
  
 
   return (
     <Flex
       w={"full"}
-      h={"65vh"}
+      h={"92vh"}
       backgroundImage={`url(${backgroundImage})`}
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
-    <SearchBar/>
+    <SearchBar onChangeValue={onChangeValue}/>
     </Flex>
   );
 }

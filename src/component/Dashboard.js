@@ -1,66 +1,34 @@
-import {
-  // Box,
-//   Flex,
-  // Avatar,
-  // HStack,
-  // Image,
-  // Text,
-  // IconButton,
-  // Button,
-  // Menu,
-  // MenuButton,
-  // MenuList,
-  // MenuItem,
-  // MenuDivider,
-  // useDisclosure,
-  // useColorModeValue,
-  // Stack,
-} from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react";
-
-// import BusSeat from "./BusSeat.js";
-import Hero from "../component/Hero.js";
 import Header from "../component/Header.js";
+import Hero from "../component/Hero.js";
 import Footer from "../component/Footer.js";
-
-
-     
-
+import { useState } from "react";
 
 export default function Dashboard() {
+  // State to manage search values
+  const [search, setSearch] = useState({
+    from: '',
+    to: '',
+    AC: '',
+    date: ''
+  });
+
+  // Handle changes in search values
+  const handleSearchValue = (value) => {
+    setSearch(prevValues => ({
+      ...prevValues,
+      from: value.from,
+      to: value.to,
+      AC: value.AC,
+      date: value.date,
+    }));
+  };
+
   return (
-    <>
-      {/* <Header /> */}
-      {/* <Flex height={"80vh"}>
-        <Hero />
-      </Flex> */}
-      <ChakraProvider>
-        <Grid
-          templateAreas={`"header header "
-        "main main "
-        "footer footer "`}
-        >
-          <GridItem area={"header"}>
-            <Header></Header>
-          </GridItem>
-
-          {/* <GridItem  area={'menu'}>
-         <Menu></Menu>
-         
-        </GridItem>  */}
-
-          <GridItem area={"main"}>
-            <Hero></Hero>
-          </GridItem>
-
-          <GridItem area={"footer"}>
-            <Footer></Footer>
-          </GridItem>
-        </Grid>
-
-      </ChakraProvider>
-
-    </>
+    <ChakraProvider>
+      <Header />
+      <Hero onChangeValue={handleSearchValue} />
+      <Footer />
+    </ChakraProvider>
   );
 }
