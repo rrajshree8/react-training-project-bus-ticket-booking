@@ -1,17 +1,10 @@
-// App.js
-import React from 'react';
-import Header from './component/Header';
-import Footer from './component/Footer';
+import React from "react";
+import Dashboard from "./component/Dashboard.js";
+
 
 function App() {
   return (
-    <div>
-      <Header />
-      
-      <Footer />
-      
-    </div>
+    <Dashboard></Dashboard>
   );
 }
-
 export default App;
