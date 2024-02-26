@@ -1,76 +1,156 @@
-import React from 'react'
 import {
-    Stack,
-    Flex,
-    Button,
-    Text,
-    VStack,
-    useBreakpointValue,
-  } from "@chakra-ui/react";
-  import { Input } from "@chakra-ui/react";
+  Stack,
+//   Flex,
+  Button,
+  Text,
+  VStack,
+  Select,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+
+import React, { useState } from "react";
+
+import { Input } from "@chakra-ui/react";
+import busData from "./bus-data.json";
+import BusList from "./DisplayBusList.js";
 
 const SearchBar = () => {
-    const today = new Date().toISOString().split("T")[0];
-    
+  const today = new Date().toISOString().split("T")[0];
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [AC, setAC] = useState(""); // Change AC to a state variable
+  const [date, setDate] = useState("");
+  const [buses, setBuses] = useState(busData.buses);
+  const [showBusList, setShowBusList] = useState(false); 
+
+
+
+  const handleAC = (busType) => {
+    // Set AC state based on selected value
+    setAC(busType);
+
+    if (busType === "AC") {
+      setBuses(busData.buses.filter((bus) => bus.isAC));
+    } else if (busType === "NonAC") {
+      setBuses(busData.buses.filter((bus) => !bus.isAC));
+    } else {
+      // If no filter, show all buses
+      setBuses(busData.buses);
+    }
+  };
+
+  const filteredBuses = buses.filter((bus) => {
+    const hasValidFrom = bus.stops.some((stop) => stop.stopName === from);
+    const hasValidTo = bus.stops.some((stop) => stop.stopName === to);
+    const hasValidAC = AC === "" || bus.isAC === (AC === "AC");
+
+    return hasValidFrom && hasValidTo && hasValidAC;
+  });
+
+  function handeSubmit(e) {
+    e.preventDefault();
+    console.log(from, to, date);
+    setShowBusList(true);
+  }
   return (
-    <Flex
+    <VStack
       w={"full"}
-      h={"8vh"}
-      backgroundSize={"cover"}
-      backgroundPosition={"center center"}
+      h={"full"}
+      justify={"center"}
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
     >
-      <VStack
-        w={"full"}
-        h={"full"}
-        justify={"center"}
-        bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
-      >
-        <Stack maxW={"3xl"} align={"flex-start"} padding={4}>
+      <form onSubmit={handeSubmit}>
+        <Stack maxW={"3xl"} align={"flex-start"} spacing={8}>
           <Text
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
-            // onChange={(e)=>setFrom(e.value)}
-
           >
             {/* Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor */}
           </Text>
           <Stack direction={"row"}>
-            <Input
+            <Select
+              onChange={(e) => setFrom(e.target.value)}
+              value={from}
+              required
+              variant="filled"
+              // _hover={{ bg: "white" }}
+              _focus={{ bg: "white" }}
+              size="lg"
               placeholder="From"
-              size="lg"
+            >
+              {buses
+                .reduce((allStops, bus) => {
+                  bus.stops.forEach((stop) => {
+                    if (!allStops.includes(stop.stopName)) {
+                      allStops.push(stop.stopName);
+                    }
+                  });
+                  return allStops;
+                }, [])
+                .map((stopName) => (
+                  <option key={stopName} value={stopName}>
+                    {stopName}
+                  </option>
+                ))}
+            </Select>
+            <Select
+              onChange={(e) => setTo(e.target.value)}
+              value={to}
+              required
               variant="filled"
-              _hover={{ bg: "white" }} // Change background color on hover
+              // _hover={{ bg: "white" }}
               _focus={{ bg: "white" }}
-            />
-            <Input
+              size="lg"
               placeholder="To"
-              size="lg"
+            >
+              {buses
+                .reduce((allStops, bus) => {
+                  bus.stops.forEach((stop) => {
+                    if (!allStops.includes(stop.stopName)) {
+                      allStops.push(stop.stopName);
+                    }
+                  });
+                  return allStops;
+                }, [])
+                .map((stopName) => (
+                  <option key={stopName} value={stopName}>
+                    {stopName}
+                  </option>
+                ))}
+            </Select>
+            <Input
+              type="date"
+              min={today}
               variant="filled"
-              _hover={{ bg: "white" }} // Change background color on hover
               _focus={{ bg: "white" }}
-            />
-            <Input type="date" 
-            min={today} 
-            // _focus={{ bg: "white" }}
+              _hover={{ bg: "white" }}
+              size="lg"
+              onChange={(e) => setDate(e.target.value)}
             />
             <Button
-
               bg={"blue.400"}
               rounded={"full"}
               color={"white"}
-              _hover={{ bg: "blue.500" }}
-              
+              type="submit"
+              backgroundColor={"red"}
+              _hover={{ bg: "red.500" }}
               w={"28rem"}
+              size="lg"
             >
               SEARCH BUSES
             </Button>
           </Stack>
         </Stack>
-      </VStack>
-    </Flex>
-  )
-}
+      </form>
+      {showBusList && <BusList from={from} to={to} date={date} AC={AC} buses={buses}/>}
+    
+    </VStack>
+    
+  
 
-export default SearchBar
+  );
+};
+
+export default SearchBar;

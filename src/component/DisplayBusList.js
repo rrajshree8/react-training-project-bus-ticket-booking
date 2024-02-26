@@ -1,99 +1,20 @@
 //BusList js
-import { Box, Button, Flex, Spacer} from "@chakra-ui/react";
-import React, { useState } from "react";
-import busData from "../busdata.json";
- 
-function BusList() {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const [AC, setAC] = useState(""); // Change AC to a state variable
-  const [buses, setBuses] = useState(busData.buses);
- 
-  const handleFrom = (stopName) => {
-    setFrom(stopName);
-  };
- 
-  const handleTo = (stopName) => {
-    setTo(stopName);
-  };
- 
-  const handleAC = (busType) => {
-    // Set AC state based on selected value
-    setAC(busType);
- 
-    if (busType === "AC") {
-      setBuses(busData.buses.filter((bus) => bus.isAC));
-    } else if (busType === "NonAC") {
-      setBuses(busData.buses.filter((bus) => !bus.isAC));
-    } else {
-      // If no filter, show all buses
-      setBuses(busData.buses);
-    }
-  };
- 
+import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
+import React from "react";
+
+
+function BusList({from, to, date , AC, buses}) {
   const filteredBuses = buses.filter((bus) => {
     const hasValidFrom = bus.stops.some((stop) => stop.stopName === from);
     const hasValidTo = bus.stops.some((stop) => stop.stopName === to);
     const hasValidAC = AC === "" || bus.isAC === (AC === "AC");
- 
+
     return hasValidFrom && hasValidTo && hasValidAC;
   });
+
+
   return (
     <>
-      <h1>List of Buses</h1>
-      {/* need to deleted after integration */}
-      <label>
-        From:
-        <select onChange={(e) => handleFrom(e.target.value)}>
-          <option value="">Select</option>
-          {buses
-            .reduce((allStops, bus) => {
-              bus.stops.forEach((stop) => {
-                if (!allStops.includes(stop.stopName)) {
-                  allStops.push(stop.stopName);
-                }
-              });
-              return allStops;
-            }, [])
-            .map((stopName) => (
-              <option key={stopName} value={stopName}>
-                {stopName}
-              </option>
-            ))}
-        </select>
-      </label>
- 
-      {/* need to deleted after integration */}
-      <label>
-        To:
-        <select onChange={(e) => handleTo(e.target.value)}>
-          <option value="">Select</option>
-          {buses
-            .reduce((allStops, bus) => {
-              bus.stops.forEach((stop) => {
-                if (!allStops.includes(stop.stopName)) {
-                  allStops.push(stop.stopName);
-                }
-              });
-              return allStops;
-            }, [])
-            .map((stopName) => (
-              <option key={stopName} value={stopName}>
-                {stopName}
-              </option>
-            ))}
-        </select>
-      </label>
-      {/* need to deleted after integration */}
-      <label>
-        AC:
-        <select onChange={(e) => handleAC(e.target.value)}>
-          <option value="">All Buses</option>
-          <option value="AC">AC Buses</option>
-          <option value="NonAC">Non-AC Buses</option>
-        </select>
-      </label>
- 
       <Flex
         flexDirection="column"
         bg="#f0f0f0"
@@ -145,7 +66,9 @@ function BusList() {
               )}
             </Flex>
             <box>AC: {bus.isAC ? "Yes" : "No"}</box>
-            <box>Available Seat:{bus.seats.filter((seat) => seat.available).length}</box>
+            <box>
+              Available Seat:{bus.seats.filter((seat) => seat.available).length}
+            </box>
             <Box display="flex">
               <Spacer />
               <Button colorScheme="red">Book Seat</Button>
@@ -156,5 +79,99 @@ function BusList() {
     </>
   );
 }
- 
+
 export default BusList;
+
+{
+  /* <div className=" header">
+<h1>List of Buses</h1>
+
+<label>
+  From:
+  <select onChange={(e) => handleFrom(e.target.value)}>
+    <option value="">Select</option>
+    {buses
+      .reduce((allStops, bus) => {
+        bus.stops.forEach((stop) => {
+          if (!allStops.includes(stop.stopName)) {
+            allStops.push(stop.stopName);
+          }
+        });
+        return allStops;
+      }, [])
+      .map((stopName) => (
+        <option key={stopName} value={stopName}>
+          {stopName}
+        </option>
+      ))}
+  </select>
+</label>
+
+
+<label>
+  To:
+  <select onChange={(e) => handleTo(e.target.value)}>
+    <option value="">Select</option>
+    {buses
+      .reduce((allStops, bus) => {
+        bus.stops.forEach((stop) => {
+          if (!allStops.includes(stop.stopName)) {
+            allStops.push(stop.stopName);
+          }
+        });
+        return allStops;
+      }, [])
+      .map((stopName) => (
+        <option key={stopName} value={stopName}>
+          {stopName}
+        </option>
+      ))}
+  </select>
+</label>
+
+<label>
+  AC:
+  <select onChange={(e) => handleAC(e.target.value)}>
+    <option value="">All Buses</option>
+    <option value="AC">AC Buses</option>
+    <option value="NonAC">Non-AC Buses</option>
+  </select>
+</label>
+</div> */
+}
+
+//commented part
+// const [from, setFrom] = useState("");
+//   const [to, setTo] = useState("");
+//   const [AC, setAC] = useState(""); // Change AC to a state variable
+//   const [buses, setBuses] = useState(busData.buses);
+
+//   const handleFrom = (stopName) => {
+//     setFrom(stopName);
+//   };
+
+//   const handleTo = (stopName) => {
+//     setTo(stopName);
+//   };
+
+//   const handleAC = (busType) => {
+//     // Set AC state based on selected value
+//     setAC(busType);
+
+//     if (busType === "AC") {
+//       setBuses(busData.buses.filter((bus) => bus.isAC));
+//     } else if (busType === "NonAC") {
+//       setBuses(busData.buses.filter((bus) => !bus.isAC));
+//     } else {
+//       // If no filter, show all buses
+//       setBuses(busData.buses);
+//     }
+//   };
+
+//   const filteredBuses = buses.filter((bus) => {
+//     const hasValidFrom = bus.stops.some((stop) => stop.stopName === from);
+//     const hasValidTo = bus.stops.some((stop) => stop.stopName === to);
+//     const hasValidAC = AC === "" || bus.isAC === (AC === "AC");
+
+//     return hasValidFrom && hasValidTo && hasValidAC;
+//   });

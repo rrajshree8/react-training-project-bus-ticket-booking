@@ -1,6 +1,6 @@
 import {
   // Box,
-  Flex,
+//   Flex,
   // Avatar,
   // HStack,
   // Image,
@@ -51,11 +51,11 @@ export default function Dashboard() {
         </GridItem>  */}
 
           <GridItem area={"main"}>
-            <Hero/>
+            <Hero></Hero>
           </GridItem>
 
           <GridItem area={"footer"}>
-            <Footer/>
+            <Footer></Footer>
           </GridItem>
         </Grid>
 
