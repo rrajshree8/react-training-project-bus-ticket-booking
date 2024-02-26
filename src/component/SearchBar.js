@@ -1,6 +1,6 @@
 import {
   Stack,
-//   Flex,
+  //   Flex,
   Button,
   Text,
   VStack,
@@ -22,9 +22,7 @@ const SearchBar = ({ onChangeValue }) => {
   const [AC, setAC] = useState(""); // Change AC to a state variable
   const [date, setDate] = useState("");
   const [buses, setBuses] = useState(busData.buses);
-  const [showBusList, setShowBusList] = useState(false); 
-
-
+  const [showBusList, setShowBusList] = useState(false);
 
   const handleAC = (busType) => {
     // Set AC state based on selected value
@@ -52,7 +50,7 @@ const SearchBar = ({ onChangeValue }) => {
     e.preventDefault();
     console.log(from, to, date);
     setShowBusList(true);
-    onChangeValue({from, to, date, AC});
+    onChangeValue({ from, to, date, AC });
   }
   return (
     <VStack
@@ -131,31 +129,25 @@ const SearchBar = ({ onChangeValue }) => {
               size="lg"
               onChange={(e) => setDate(e.target.value)}
             />
-            <Link to="/miniDasboard" style={{}}>
-
-            
-            <Button
-              bg={"blue.400"}
-              rounded={"full"}
-              color={"white"}
-              type="submit"
-              backgroundColor={"red"}
-              _hover={{ bg: "red.500" }}
-              w={"28rem"}
-              size="lg"
-            >
-              SEARCH BUSES
-            </Button>
+            <Link to="/miniDasboard" style={{display:"flex", padding:"0px", margin:"0px" }}>
+              <Button
+                bg={"blue.400"}
+                rounded={"full"}
+                color={"white"}
+                type="submit"
+                backgroundColor={"red"}
+                _hover={{ bg: "red.500" }}
+                w={"10rem"}
+                size="lg"
+              >
+                SEARCH BUSES
+              </Button>
             </Link>
           </Stack>
         </Stack>
       </form>
       {/* {showBusList && <BusList from={from} to={to} date={date} AC={AC} buses={buses}/>} */}
-    
     </VStack>
-    
-  
-
   );
 };
 
