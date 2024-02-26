@@ -1,15 +1,19 @@
-import { Box, Flex, Grid, GridItem, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text, Image, Button, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import Sleeper from "./Sleeper";
 import Seater from "./Seater";
 import Stear from "../Assets/steering.png";
 import buses from "../Assets/data";
+// import { wrap } from "framer-motion";
+import { Wrap, WrapItem } from '@chakra-ui/react'
 
 const BusSeat = () => {
+  const buttonSize = useBreakpointValue({ base: "large", md: "l", lg: "xl" });
+
   return (
-    <Box bg="#F8F8F8" h="100vh">
-      <Grid templateColumns="repeat(2, 1fr)" gap={3} ml="10px">
-        <GridItem h="10">
+    <Box bg="#F8F8F8" h="100%" p={4}>
+      <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} gap={3} ml="10px">
+        <GridItem colSpan={{ base: 1, md: 2 }}>
           <Text fontSize="x-large" fontWeight="700">
             Seat Available
           </Text>
@@ -122,11 +126,11 @@ const BusSeat = () => {
           </Grid>
         </GridItem>
       </Grid>
-      <Box mt="100px" ml="30px">
-        <Flex flexDirection="row" gap="5">
+      <Box mt="100px" ml={{base: "0", md: "4"}}>
+        <Flex flexDirection={{ base: "column", md: "row"}} gap="5">
         <Button
               color="#C32629"
-              fontSize="large"
+              fontSize={buttonSize}
               fontWeight="600"
              background="#FEFEFE"
              _hover={{background:'#DC635B', color:'#FEFEFE'}}
@@ -137,7 +141,7 @@ const BusSeat = () => {
                   
         <Button
               color="#C32629"
-              fontSize="large"
+              fontSize={buttonSize}
               fontWeight="600"
              background="#FEFEFE"
              _hover={{background:'#DC635B', color:'#FEFEFE'}}
@@ -146,7 +150,7 @@ const BusSeat = () => {
             </Button>
             <Button
               color="#C32629"
-              fontSize="large"
+              fontSize={buttonSize}
               fontWeight="600"
              background="#FEFEFE"
              _hover={{background:'#DC635B', color:'#FEFEFE'}}
@@ -155,7 +159,7 @@ const BusSeat = () => {
             </Button>
             <Button
               color="#C32629"
-              fontSize="large"
+              fontSize={buttonSize}
               fontWeight="600"
              background="#FEFEFE"
              _hover={{background:'#DC635B', color:'#FEFEFE'}}
@@ -167,8 +171,8 @@ const BusSeat = () => {
         </Flex>
       </Box>
 
-      <Grid templateColumns="repeat(3, 1fr)" gap={10}>
-        <GridItem colSpan={2}>
+      <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} gap={10}>
+        <GridItem colSpan={{base: 1, md: 2}}>
           <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px">
             <Flex>
               <Box>
@@ -178,8 +182,9 @@ const BusSeat = () => {
                   </Text>
                 </Flex>
               </Box>
-              <Box w="100%">
-                <Grid templateColumns="repeat(5, 1fr)">
+              <Box display="flex" flexWrap="wrap" w="100%">
+
+                <Grid  w="100%"  templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} gap={10} >
                   {buses[0].seats.sleeper.map((item, ind) => {
                     return (
                       <GridItem key={ind}>
@@ -203,7 +208,7 @@ const BusSeat = () => {
                 </Flex>
               </Box>
               <Box w="100%">
-                <Grid templateColumns="repeat(5, 1fr)">
+                <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}}>
                   {buses[0].seats.seater.map((item, ind) => {
                     return (
                       <GridItem key={ind}>
