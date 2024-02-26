@@ -1,4 +1,3 @@
-
 import {
   // Box,
   Flex,
@@ -16,31 +15,24 @@ import {
   // useDisclosure,
   // useColorModeValue,
   // Stack,
-} from '@chakra-ui/react'
+} from "@chakra-ui/react";
 
 import { Box } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem } from "@chakra-ui/react";
 
-
-
-import BusSeat from './BusSeat.js'
-import Hero from '../component/Hero.js';
-import Header from '../component/Header.js'
-import Footer from '../component/Footer.js'
+import BusSeat from "./BusSeat.js";
+import Hero from "../component/Hero.js";
+import Header from "../component/Header.js";
+import Footer from "../component/Footer.js";
 // import Menu from "../component/Menu.js";
-import { useState } from 'react';
-
-import { Box } from "@chakra-ui/react";
-import BusSeat from './BusSeat.js'
-
+import { useState } from "react";
 
 export default function Dashboard() {
+  const [searchButton, setSearchButton] = useState(false);
 
-  const [searchButton,setSearchButton]=useState(false);
-
-  function handleButton(){
-    setSearchButton(!searchButton)
+  function handleButton() {
+    setSearchButton(!searchButton);
   }
 
   return (
@@ -65,7 +57,7 @@ export default function Dashboard() {
         "main main "
         "footer footer "`}
         >
-          <GridItem area={'header'}>
+          <GridItem area={"header"}>
             <Header></Header>
           </GridItem>
 
@@ -74,20 +66,16 @@ export default function Dashboard() {
          
         </GridItem>  */}
 
-          <GridItem area={'main'}>
-
-            <Hero ></Hero>
+          <GridItem area={"main"}>
+            <Hero></Hero>
           </GridItem>
 
-          <GridItem area={'footer'}>
+          <GridItem area={"footer"}>
             <Footer></Footer>
           </GridItem>
         </Grid>
       </ChakraProvider>
-=======
-      
 
-      <Footer/>
     </>
-  )
+  );
 }

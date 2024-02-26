@@ -2,6 +2,7 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import Dashboard from "./component/Dashboard.js";
+import SearchBar from "./component/SearchBar.js";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <ChakraProvider>
        
       <Dashboard/>
+      <SearchBar/>
     </ChakraProvider>
 
   );
