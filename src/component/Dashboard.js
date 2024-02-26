@@ -17,6 +17,7 @@ import {
   // useColorModeValue,
   // Stack,
 } from '@chakra-ui/react'
+
 import { Box } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Grid, GridItem } from '@chakra-ui/react'
@@ -29,6 +30,9 @@ import Header from '../component/Header.js'
 import Footer from '../component/Footer.js'
 // import Menu from "../component/Menu.js";
 import { useState } from 'react';
+
+import { Box } from "@chakra-ui/react";
+import BusSeat from './BusSeat.js'
 
 
 export default function Dashboard() {
@@ -43,10 +47,18 @@ export default function Dashboard() {
     <>
       {/* <Flex height={'80vh'}><Hero/></Flex>
        <div>
+=======
+  return (
+    <>
+       <Header/>
+       <Flex height={'80vh'}><Hero/></Flex>
+       {/* <div>
+>>>>>>> 922a826a1ce6a988818575a4d72279aca4cd2f05
        <Box bg="red" height={'80vh'} style={{width:'100vw'}}>
         <BusSeat/>
        </Box>
        </div> */}
+
       <ChakraProvider>
         <Grid
           templateAreas={`"header header "
@@ -72,6 +84,10 @@ export default function Dashboard() {
           </GridItem>
         </Grid>
       </ChakraProvider>
+=======
+      
+
+      <Footer/>
     </>
   )
 }

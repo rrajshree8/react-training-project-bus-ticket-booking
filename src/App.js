@@ -1,10 +1,17 @@
 import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+
 import Dashboard from "./component/Dashboard.js";
 
 
 function App() {
   return (
-    <Dashboard></Dashboard>
+    <ChakraProvider>
+       
+      <Dashboard/>
+    </ChakraProvider>
+
   );
 }
+
 export default App;

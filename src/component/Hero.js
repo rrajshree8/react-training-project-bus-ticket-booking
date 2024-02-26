@@ -6,6 +6,7 @@ import {
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
+
 import React, { useState } from "react";
 import backgroundImage from "../assets/Hero.jpeg";
 import { Input } from "@chakra-ui/react";
@@ -21,8 +22,6 @@ export default function WithBackgroundImage() {
   const [from,setFrom]=useState(''); 
   const [to,setTo]=useState(''); 
   const [date,setDate]=useState(''); 
-  
-  
 
   return (
     <Flex
@@ -45,6 +44,7 @@ export default function WithBackgroundImage() {
             lineHeight={1.2}
             fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
             onChange={(e)=>setFrom(e.value)}
+
           >
             {/* Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor */}
           </Text>
@@ -67,8 +67,8 @@ export default function WithBackgroundImage() {
             min={today} 
             // _focus={{ bg: "white" }}
             />
-
             <Button
+
               bg={"blue.400"}
               rounded={"full"}
               color={"white"}
@@ -78,14 +78,6 @@ export default function WithBackgroundImage() {
             >
               SEARCH BUSES
             </Button>
-            {/* <Button
-              bg={'whiteAlpha.300'}
-              rounded={'full'}
-              color={'white'}
-              _hover={{ bg: 'whiteAlpha.500' }}
-            >
-              Show me more
-            </Button> */}
           </Stack>
         </Stack>
       </VStack>

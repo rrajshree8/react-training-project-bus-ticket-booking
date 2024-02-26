@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import selectedImg from '../assets/sleeper.png'
 import unSelectedImg from "../assets/661610-201.png"
 
+
 const Sleeper = ({ item }) => {
 
   const [isSelect, SetSelect] = useState(!item.available);
@@ -11,7 +12,6 @@ const Sleeper = ({ item }) => {
       <Image src={isSelect ? unSelectedImg : selectedImg} alt="Sleeper Image" width="100px" h="80px" />
       <Text style={{ transform: 'translate(30px,-53px)', }} fontWeight="800" color="#C32629">{item.number}</Text>
     </Box>
-  )
-}
+)}
 
 export default Sleeper
