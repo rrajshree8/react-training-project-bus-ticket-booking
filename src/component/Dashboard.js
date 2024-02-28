@@ -31,8 +31,6 @@ import Footer from '../component/Footer.js'
 // import Menu from "../component/Menu.js";
 import { useState } from 'react';
 
-import { Box } from "@chakra-ui/react";
-import BusSeat from './BusSeat.js'
 
 
 export default function Dashboard() {
@@ -83,11 +81,8 @@ export default function Dashboard() {
             <Footer></Footer>
           </GridItem>
         </Grid>
-      </ChakraProvider>
-=======
       
-
-      <Footer/>
+      </ChakraProvider>
     </>
   )
 }
