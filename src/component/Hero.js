@@ -2,11 +2,11 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import React, { useState } from "react";
+import React from "react";
 import backgroundImage from "../assets/Hero.jpeg";
 import SearchBar from "./SearchBar.js";
 
-export default function Hero({onChangeValue}) {
+export default function Hero() {
  
 
   return (
@@ -17,7 +17,7 @@ export default function Hero({onChangeValue}) {
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
     >
-    <SearchBar onChangeValue={onChangeValue}/>
+    <SearchBar />
     </Flex>
   );
 }
