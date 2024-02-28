@@ -184,7 +184,7 @@ const BusSeat = () => {
               </Box>
               <Box display="flex" flexWrap="wrap" w="100%">
 
-                <Grid  w="100%"  templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}} gap={10} >
+                <Grid  w="100%"  templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(5, 1fr)"}} gap={5} >
                   {buses[0].seats.sleeper.map((item, ind) => {
                     return (
                       <GridItem key={ind}>
@@ -208,7 +208,7 @@ const BusSeat = () => {
                 </Flex>
               </Box>
               <Box w="100%">
-                <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)"}}>
+                <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(5, 1fr)"}}>
                   {buses[0].seats.seater.map((item, ind) => {
                     return (
                       <GridItem key={ind}>

@@ -1,7 +1,7 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import selectedImg from "../Assets/sleeper.png";
-import unSelectedImg from "../Assets/661610-201.png";
+import unSelectedImg from "../Assets/sleep.png";
 
 const Sleeper = ({ item }) => {
   const [isSelect, SetSelect] = useState(!item.available);
