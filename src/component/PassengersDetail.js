@@ -1,16 +1,13 @@
 import {
     FormControl,
     FormLabel,
-    FormErrorMessage,
-    FormHelperText,
+
 } from '@chakra-ui/react'
-import { Input, Flex, Box } from '@chakra-ui/react'
-import { Filter } from '@chakra-ui/react';
+import { Input, Flex, Box, Radio, Button } from '@chakra-ui/react'
 
 import React from 'react'
 import { useState } from 'react'
-
-import backgroundImage from "../assets/Hero.jpeg";
+import { Link } from 'react-router-dom'
 
 
 export default function PassengersDetail() {
@@ -19,58 +16,53 @@ export default function PassengersDetail() {
     const handleInputChange = (e) => setInput(e.target.value)
     const isError = input === ''
     return (
-        // <div style={{ display: 'flex', width: '100vh', height: '100vh' }}>
-            <Box  
-                w='100%' 
-                display="flex"
-                flexDirection="column"
-                // justifyContent="center"
-                // alignItems="center"
-                >
-                
-            
-            <Flex
-                w={"100%"}
-                h={"100vh"}
-                backgroundImage={`url(${backgroundImage})`}
-                backgroundSize={"cover"}
-                backgroundPosition={"center center"}
-                filter='auto' blur='3px'
+        <Flex >
+            <Box bg="rgba(255, 255, 255, 0.8)" p={8} filter='auto' blur='0px' borderRadius="md" boxShadow="lg"
             >
-            </Flex>
-            <Flex
-                w="25%"
-                h="100vh"
-                position="absolute"
-                top="0"
-                left="0"
-                justify="center"
-                align="center"
-                zIndex="1"
-                // background="white"
-            >
-                <FormControl>
+                <FormControl isRequired>
+                    <FormLabel>Passenger name</FormLabel>
+                    <Input type='text' placeholder='Passenger name' />
+
+                    <Flex pt={4}>
+                        <Box pr={4}>
+                            <FormLabel>Gender</FormLabel>
+                            <Radio pr={2} value="male">Male</Radio>
+                            <Radio value="female">Female</Radio>
+                        </Box >
+                        <Box >
+                            <FormLabel>Age</FormLabel>
+                            <Input type='number' placeholder='Age' />
+                        </Box >
+                    </Flex>
+                    <FormLabel>Residence</FormLabel>
+                    <Input type='text' placeholder='Residence' />
+
+                    <Box bg="rgba(255, 255, 255, 0.8)" pt={10} pb={2} borderRadius="md"
+                    >
+                        <FormLabel>Contact Details</FormLabel>
+                    </Box>
+
+
                     <FormLabel>Email</FormLabel>
-                    <Input type="email" value={input} onChange={handleInputChange} />
-                    {!isError ? (
-                        <FormHelperText>
-                            Enter the email you'd like to receive the newsletter on.
-                        </FormHelperText>
-                    ) : (
-                        <FormErrorMessage>Email is required.</FormErrorMessage>
-                    )}
-                    <FormLabel>Email address</FormLabel>
-                    <Input type="email" />
-                    <FormHelperText>We'll never share your email.</FormHelperText>
-                    <FormLabel>Full Name</FormLabel>
-                    <Input type="text" />
-                    <FormHelperText>We'll never share your email.</FormHelperText>
-                    <FormLabel>Phone Number</FormLabel>
-                    <Input type="number" />
-                    <FormHelperText>We'll never share your email.</FormHelperText>
+                    <Input type='email' placeholder='email' />
+                    <FormLabel pt={2}>Number</FormLabel>
+                    <Input type='number' placeholder='Number' />
+
+                    <Box pt={5}>Total Amount </Box>
+
+                    <Link to="/payment">
+                        <Flex justifyContent="flex-end">
+                            <Box p={4} pr={0}>
+                                <Button colorScheme='teal' variant='outline'>
+                                    Proceed To Pay
+                                </Button>
+                            </Box>
+                        </Flex>
+                    </Link>
+
                 </FormControl>
-            </Flex>
             </Box>
-        
+        </Flex>
     )
 }
+
