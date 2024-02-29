@@ -71,7 +71,7 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
               ))}
             </Select>
             <Input type="date" min={today} variant="filled" _focus={{ bg: "white" }} size="lg" onChange={(e) => dispatch(setDate(e.target.value))} />
-            <Button bg={"blue.400"} rounded={"full"} color={"white"} type="submit" backgroundColor={"red"} _hover={{ bg: "red.500" }} w={"15rem"} size="lg">
+            <Button bg={"blue.400"} rounded={"full"} color={"white"} type="submit" backgroundColor={"red"} _hover={{ bg: "red.500" }} w={"30rem"} size="lg">
               SEARCH BUSES
             </Button>
           </Stack>
