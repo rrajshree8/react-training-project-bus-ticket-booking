@@ -53,7 +53,7 @@ export default function PassengersDetail() {
                     <Link to="/payment">
                         <Flex justifyContent="flex-end">
                             <Box p={4} pr={0}>
-                                <Button colorScheme='teal' variant='outline'>
+                                <Button id='rzp-button1' colorScheme='teal' variant='outline'>
                                     Proceed To Pay
                                 </Button>
                             </Box>
