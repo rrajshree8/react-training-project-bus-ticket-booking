@@ -10,6 +10,7 @@ import MiniDasboard from "./component/MiniDasboard.js";
 import Payment from "./component/Payment.js";
 import { Provider } from 'react-redux';
 import store from './store/store.js';
+import SideNavbar from "./component/SideNavbar.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 

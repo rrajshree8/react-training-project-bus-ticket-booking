@@ -35,11 +35,11 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
   };
 
   return (
-    <VStack w={"full"} h={"full"} justify={"center"} bgGradient={"linear(to-r, blackAlpha.600, transparent)"}>
+    <VStack w={"full"} h={"full"} justify={"center"}  bgGradient={"linear(to-r, blackAlpha.600, transparent)"}>
       <form onSubmit={handleSubmit}>
         <Stack maxW={"3xl"} align={"flex-start"} spacing={8}>
           <Text color={"white"} fontWeight={700} lineHeight={1.2} fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}>
-            {/* Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor */}
+           
           </Text>
           <Stack direction={"row"}>
             <Select onChange={(e) => dispatch(setFrom(e.target.value))} value={from} required variant="filled" _focus={{ bg: "white" }} size="lg" placeholder="From">

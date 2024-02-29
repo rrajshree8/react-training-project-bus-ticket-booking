@@ -7,6 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import BusList from "./DisplayBusList.js";
 import DisplayBusList from './DisplayBusList.js'
+import SideNavbar from "./SideNavbar.js";
 
 export default function MiniDasboard() {
     
@@ -26,8 +27,8 @@ export default function MiniDasboard() {
           <SearchBar />
         </GridItem>
 
-        <GridItem bg="blue" area={"nav"}>
-          skdufhis
+        <GridItem area={"nav"}>
+          <SideNavbar/>
         </GridItem>
 
         <GridItem  area={"menu"}>
