@@ -9,6 +9,7 @@ import BusSeat from "./component/BusSeat.js";
 import MiniDasboard from "./component/MiniDasboard.js";
 import { Provider } from 'react-redux';
 import store from './store/store.js';
+import SideNavbar from "./component/SideNavbar.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/Display-Bus" element={<DisplayBusList />}></Route>
           <Route path="/Seat" element={<BusSeat />} />
           <Route path="/miniDasboard" element={<MiniDasboard />} />
+          <Route path="/sideNavbar" element={< SideNavbar />} />
+
         </Routes>
       </Router>
       </Provider>
